@@ -33,17 +33,15 @@ def create_cloud(file, out="ciyun.png"):
     w.to_file(path(out))
     return path(path(out))
 
-def call(argv):
-    if len(argv) == 2:
-        return create_cloud(path(argv[0]), argv[1])
-    elif len(argv) == 1:
-        return create_cloud(path(argv[0]))
+# def call(argv):
+#     if len(argv) == 2:
+#         return create_cloud(path(argv[0]), argv[1])
+#     elif len(argv) == 1:
+#         return create_cloud(path(argv[0]))
 
 if __name__ == "__main__":
     argv = sys.argv
     if len(argv) == 3:
         create_cloud(path(argv[1]), argv[2])
-    elif len(argv) == 2:
-        create_cloud(path(argv[1]))
     else:
-        print("输入不符合要求")
+        print("缺少参数")
